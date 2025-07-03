@@ -13,7 +13,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: db-storage
   hostPath:
-    path: 
+    path: /mnt/data/mysql
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -66,10 +66,10 @@ spec:
             - name: MYSQL_ROOT_PASSWORD
               value: k8s12345
           volumeMounts:
-            - mountPath: 
-              name: 
+            - mountPath: /var/lib/mysql
+              name: mysql-persistent-storage
       volumes:
-        - name: 
+        - name: mysql-persistent-storage
           persistentVolumeClaim:
-            claimName: 
+            claimName: db-pvc
 
