@@ -1,1 +1,6 @@
+resources:
+  - ../../base
 
+images:
+  - name: hjukeboxox/app-with-argocd-kustomize_practice1
+    newTag: REPLACEME
