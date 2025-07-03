@@ -67,9 +67,9 @@ jobs:
     - name: Set up Image
       run: |
         if [[ "${{ github.ref_name }}" == "dev" ]]; then
-          sed -i "s%image: ${{ secrets.DOCKERHUB_USERNAME }}/app-with-argocd-kustomize_practice1:[A-z0-9]*%image: ${{ secrets.DOCKERHUB_USERNAME }}/app-with-argocd-kustomize_practice1:${{ github.sha }}%" ./manifest/argocd/argocd-app-dev.yaml
+          sed -i "s/newTag: .*/newTag: ${{ github.sha }}/" ./manifest/overlays/dev/kustomization.yaml
         elif [[ "${{ github.ref_name }}" == "prod" ]]; then
-          sed -i "s%image: ${{ secrets.DOCKERHUB_USERNAME }}/app-with-argocd-kustomize_practice1:[A-z0-9]*%image: ${{ secrets.DOCKERHUB_USERNAME }}/app-with-argocd-kustomize_practice1:${{ github.sha }}%" ./manifest/argocd/argocd-app-prod.yaml
+          sed -i "s/newTag: .*/newTag: ${{ github.sha }}/" ./manifest/overlays/prod/kustomization.yaml
         fi
       
     - name: Commit and push changes
