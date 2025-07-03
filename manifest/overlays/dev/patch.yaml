@@ -1,10 +1,1 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: argocd-app-deployment
-spec:
-  template:
-    spec:
-      containers:
-        - name: argocd-app-container
-          image: hjukeboxox/app-with-argocd-kustomize_practice1:REPLACEME
+
