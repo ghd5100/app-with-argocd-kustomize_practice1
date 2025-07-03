@@ -1,1 +1,3 @@
-
+resources:
+  - app.yaml
+  - db.yaml
