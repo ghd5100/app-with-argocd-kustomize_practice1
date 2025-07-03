@@ -1,3 +1,9 @@
 resources:
   - app.yaml
   - db.yaml
+
+
+configMapGenerator:
+- name: env-vars
+  envs:
+    - dev.env
