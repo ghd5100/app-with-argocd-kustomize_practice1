@@ -1,1 +1,6 @@
-
+# argocd-app-dev.yaml
+spec:
+  source:
+    repoURL: https://github.com/your/repo
+    path: manifest/overlays/dev
+    targetRevision: main
