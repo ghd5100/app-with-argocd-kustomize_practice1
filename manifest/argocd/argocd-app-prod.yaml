@@ -1,6 +1,6 @@
 # argocd-app-prod.yaml
 spec:
   source:
-    repoURL: https://github.com/your/repo
+    repoURL: https://github.com/ghd5100/app-with-argocd-kustomize_practice1.git
     path: manifest/overlays/prod
     targetRevision: main
