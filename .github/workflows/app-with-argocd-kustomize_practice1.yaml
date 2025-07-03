@@ -60,7 +60,7 @@ jobs:
     
     - uses: actions/checkout@v4
       with:
-        repository: <repository_user>/app-with-argocd-kustomize_practice1
+        repository: ghd5100/app-with-argocd-kustomize_practice1
         ref: main
         token: ${{ secrets.TOKEN }}
     
